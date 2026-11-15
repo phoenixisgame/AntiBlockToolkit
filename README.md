@@ -10,10 +10,10 @@
 
 ---
 
-### ⚙️ Quick Installation / طريقة التثبيت السريعة:
+### ⚙️ Quick Installation / طريقة التشغيل السريعة:
 
-> Download **`AntiBlockToolkit.exe`** from [Releases](https://github.com/phoenixisgame/AntiBlockToolkit/releases), right-click and **Run as administrator**, then click **ENABLE SHIELD**.  
-> حمّل ملف **`AntiBlockToolkit.exe`** من قسم الإصدارات، شغّله **كمسؤول (Run as administrator)**، ثم اضغط على **ENABLE SHIELD**.
+> **English:** Download **`AntiBlockToolkit.exe`** from [Releases](https://github.com/phoenixisgame/AntiBlockToolkit/releases), right-click and **Run as administrator**, then click **ENABLE SHIELD**.  
+> **العربية:** حمّل ملف **`AntiBlockToolkit.exe`** من [قسم الإصدارات](https://github.com/phoenixisgame/AntiBlockToolkit/releases)، انقر عليه بالزر الأيمن واختر **تشغيل كمسؤول (Run as administrator)**، ثم اضغط على **ENABLE SHIELD**.
 
 ---
 
@@ -61,10 +61,26 @@ The goal is to provide gamers and everyday users with unrestricted, full-speed i
 
 ---
 
-## 🛠️ Building From Source
+## ☕ Support the Project / دعم المشروع
 
-```powershell
-git clone [https://github.com/phoenixisgame/AntiBlockToolkit.git](https://github.com/phoenixisgame/AntiBlockToolkit.git)
-cd AntiBlockToolkit
-pip install -r requirements.txt
-python main.py
+Anti-Block Toolkit is 100% free. Your voluntary support helps maintain and develop future updates!  
+المشروع مجاني بالكامل، ومساهمتك الطوعية تساعد في استمرار صيانته وتطوير إصدارات قادمة.
+
+* **Network / الشبكة:** BNB Smart Chain (BEP20)
+* **Accepted / العملات:** USDT / BNB (Min: 1.00 USDT)
+* **Wallet Address (RedotPay / Crypto) / عنوان المحفظة:**
+```text
+0x2F8D26b67d8be078A2BE40c1887379232746fD79
+```
+
+<div align="center">
+
+<img src="qr.png" width="160" alt="Support QR Code" /><br/>
+<sub>Scan with RedotPay / Binance to support development</sub>
+
+<br/><br/>
+
+**Anti-Block Toolkit — Freedom to Connect. Freedom to Play.**  
+**حرية الاتصال، وحرية اللعب.**
+
+</div>
