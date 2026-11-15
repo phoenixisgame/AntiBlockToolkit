@@ -1,168 +1,482 @@
+
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعم مشروع Anti-Block Toolkit 🛡️</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container {
-            background-color: #161b22;
-            padding: 35px 25px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-            max-width: 480px;
-            width: 100%;
-            border: 1px solid #30363d;
-        }
-        h1 { color: #58a6ff; font-size: 24px; margin-bottom: 8px; }
-        .tagline { color: #3fb950; font-size: 13px; font-weight: bold; margin-bottom: 12px; }
-        p.subtitle { color: #8b949e; font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
-        .download-box {
-            margin-bottom: 20px;
-        }
-        .download-btn {
-            display: inline-block;
-            background-color: #238636;
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: 0.2s;
-            box-shadow: 0 4px 12px rgba(35, 134, 54, 0.4);
-        }
-        .download-btn:hover { background-color: #2ea043; transform: translateY(-1px); }
-        .qr-card {
-            background-color: #ffffff;
-            padding: 12px;
-            border-radius: 14px;
-            display: inline-block;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        .qr-card img {
-            max-width: 210px;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-        }
-        .badge-net {
-            background-color: rgba(88, 166, 255, 0.15);
-            color: #58a6ff;
-            border: 1px solid #58a6ff;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        .wallet-label {
-            font-size: 13px;
-            color: #8b949e;
-            margin-bottom: 6px;
-        }
-        .wallet-box {
-            background-color: #0d1117;
-            padding: 12px;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            font-family: Consolas, monospace;
-            font-size: 13px;
-            margin-bottom: 15px;
-            word-break: break-all;
-            color: #58a6ff;
-        }
-        .copy-btn {
-            background-color: #1f6feb;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.2s;
-            margin-bottom: 20px;
-        }
-        .copy-btn:hover { background-color: #388bfd; }
-        .warning-box {
-            background-color: rgba(218, 54, 51, 0.1);
-            color: #f85149;
-            border: 1px solid rgba(218, 54, 51, 0.4);
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 12px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-        .gh-link {
-            display: inline-block;
-            color: #8b949e;
-            text-decoration: none;
-            font-size: 13px;
-            margin-top: 5px;
-        }
-        .gh-link:hover { color: #58a6ff; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d18">
+<title>Anti-Block Toolkit | دعم المشروع</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #080d18;
+    --panel: #101827;
+    --border: #202d40;
+    --blue: #3b82f6;
+    --cyan: #38bdf8;
+    --green: #22c55e;
+    --text: #e5edf8;
+    --muted: #8b9bb0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background:
+        radial-gradient(ellipse at 50% 0%, #102a4d 0%, transparent 50%),
+        var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 560px;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 19px;
+    background: linear-gradient(145deg, #2563eb, #0e7490);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    font-size: 30px;
+    box-shadow: 0 8px 35px #2563eb40;
+}
+
+.header h1 {
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: white;
+}
+
+.header h1 span {
+    color: var(--cyan);
+}
+
+.version {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #60a5fa;
+    background: #1e3a5f55;
+    border: 1px solid #2563eb55;
+    padding: 4px 13px;
+    border-radius: 30px;
+}
+
+/* Main */
+
+.card {
+    background: linear-gradient(145deg, #111d30, #0c1422);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 27px;
+    box-shadow: 0 20px 70px #00000050;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.intro h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.intro p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.feature {
+    background: #152238;
+    border: 1px solid #263750;
+    border-radius: 12px;
+    padding: 13px 5px;
+    text-align: center;
+    font-size: 11px;
+    color: #b8c9df;
+}
+
+.feature .icon {
+    display: block;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+/* Download */
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(100deg, #2563eb, #0ea5e9);
+    color: white;
+    text-decoration: none;
+    border-radius: 11px;
+    font-weight: 800;
+    font-size: 14px;
+    transition: .25s;
+    box-shadow: 0 7px 25px #2563eb30;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px #2563eb50;
+}
+
+.download-note {
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+/* Support */
+
+.divider {
+    height: 1px;
+    background: var(--border);
+    margin: 28px 0;
+}
+
+.support {
+    text-align: center;
+}
+
+.support h2 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.support > p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+.qr-container {
+    display: inline-block;
+    background: white;
+    padding: 12px;
+    border-radius: 15px;
+    margin-bottom: 17px;
+}
+
+.qr-container img {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+.network {
+    display: inline-block;
+    color: #60a5fa;
+    background: #1e3a5f55;
+    border: 1px solid #2563eb66;
+    border-radius: 30px;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.wallet-label {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.wallet-box {
+    direction: ltr;
+    background: #080f1c;
+    border: 1px solid #263750;
+    border-radius: 10px;
+    padding: 14px 10px;
+    color: #60a5fa;
+    font-family: Consolas, monospace;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+    margin-bottom: 12px;
+    user-select: all;
+}
+
+.copy-btn {
+    width: 100%;
+    background: #172d4b;
+    border: 1px solid #2d4f78;
+    color: #93c5fd;
+    padding: 12px;
+    border-radius: 9px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.copy-btn:hover {
+    background: #1e416b;
+    color: white;
+}
+
+.warning {
+    margin-top: 17px;
+    padding: 13px;
+    background: #451c2533;
+    border: 1px solid #9f3b4b66;
+    color: #fda4af;
+    border-radius: 10px;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    margin-top: 23px;
+}
+
+.footer a {
+    color: #8da6c4;
+    text-decoration: none;
+    font-size: 12px;
+    transition: .2s;
+}
+
+.footer a:hover {
+    color: var(--cyan);
+}
+
+.footer p {
+    color: #53647a;
+    font-size: 10px;
+    margin-top: 12px;
+}
+
+/* Notification */
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    background: #142b25;
+    border: 1px solid #22c55e66;
+    color: #86efac;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 13px;
+    opacity: 0;
+    transition: .3s;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.toast.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+@media(max-width: 420px) {
+    .card {
+        padding: 20px 16px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .qr-container img {
+        width: 160px;
+        height: 160px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Anti-Block Toolkit 🛡️</h1>
-        <div class="tagline">أداة فك حجب الألعاب والمواقع محلياً للويندوز بدون لاغ أو VPN</div>
-        
-        <p class="subtitle">
-            مشروع مجاني ومحلي 100% يهدف لتجاوز حجب الشبكات والـ DPI بكامل سرعتك الأصلية وبدون زيادة في البينغ. يمكنك دعم استمرارية وتطوير الأداة عبر مسح الرمز أدناه أو التحويل إلى المحفظة:
+
+<div class="container">
+
+    <header class="header">
+        <div class="logo">🛡️</div>
+        <h1>ANTI-BLOCK <span>TOOLKIT</span></h1>
+        <div class="version">WINDOWS · OPEN SOURCE</div>
+    </header>
+
+    <main class="card">
+
+        <section class="intro">
+            <h2>إنترنت بلا قيود، وألعاب بلا حجب.</h2>
+            <p>
+                أداة محلية لنظام Windows تهدف إلى تجاوز قيود الشبكات
+                وحجب الألعاب والمواقع باستخدام أساليب معالجة الحجب وDPI،
+                دون الحاجة إلى VPN.
+            </p>
+        </section>
+
+        <div class="features">
+            <div class="feature">
+                <span class="icon">⚡</span>
+                أداء محلي
+            </div>
+            <div class="feature">
+                <span class="icon">🔒</span>
+                دون VPN
+            </div>
+            <div class="feature">
+                <span class="icon">🖥️</span>
+                Windows
+            </div>
+        </div>
+
+        <a class="download-btn"
+           href="https://github.com/phoenixisgame/AntiBlockToolkit/releases/latest"
+           target="_blank" rel="noopener noreferrer">
+            <span>⬇️</span>
+            تحميل أحدث إصدار
+        </a>
+
+        <p class="download-note">
+            احصل على أحدث نسخة مباشرة من GitHub Releases
         </p>
 
-        <div class="download-box">
-            <a href="https://github.com/phoenixisgame/AntiBlockToolkit/releases/latest" class="download-btn">⬇️ تحميل أحدث نسخة للويندوز</a>
-        </div>
-        
-        <div class="qr-card">
-            <img src="qr.png" alt="Scan QR Code" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=0x2F8D26b67d8be078A2BE40c1887379232746fD79'">
-        </div>
-        
-        <div>
-            <span class="badge-net">الشبكة المطلوبة: BNB Smart Chain (BEP20)</span>
-        </div>
-        
-        <div class="wallet-label">عنوان المحفظة المعتمد (RedotPay / Crypto):</div>
-        <div class="wallet-box" id="walletAddr">0x2F8D26b67d8be078A2BE40c1887379232746fD79</div>
-        
-        <button class="copy-btn" onclick="copyAddress()">📋 نسخ العنوان</button>
-        
-        <div class="warning-box">
-            ⚠️ <strong>تنبيه هام:</strong> يرجى التأكد من إرسال (USDT أو BNB) عبر شبكة <strong>BEP20</strong> حصراً، والحد الأدنى للإيداع هو <strong>1.00 USDT</strong>.
-        </div>
+        <div class="divider"></div>
 
-        <div>
-            <a href="https://github.com/phoenixisgame/AntiBlockToolkit" class="gh-link">⭐ تابع المشروع على GitHub</a>
-        </div>
-    </div>
+        <section class="support">
 
-    <script>
-        function copyAddress() {
-            const addr = document.getElementById("walletAddr").innerText.trim();
-            navigator.clipboard.writeText(addr).then(() => {
-                alert("تم نسخ عنوان المحفظة بنجاح!");
-            }).catch(err => {
-                prompt("انسخ العنوان يدوياً:", addr);
-            });
+            <h2>ادعم استمرار المشروع ❤️</h2>
+            <p>
+                المشروع مجاني ومفتوح المصدر.
+                دعمك يساهم في استمرار التطوير والصيانة
+                وتحسين تجربة المستخدم.
+            </p>
+
+            <div class="qr-container">
+                <img
+                    src="qr.png"
+                    alt="رمز QR لدعم المشروع"
+                    onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=0x2F8D26b67d8be078A2BE40c1887379232746fD79'"
+                >
+            </div>
+
+            <br>
+
+            <div class="network">
+                BNB SMART CHAIN · BEP20
+            </div>
+
+            <p class="wallet-label">
+                عنوان المحفظة المعتمد (RedotPay / Crypto)
+            </p>
+
+            <div class="wallet-box" id="walletAddr">
+                0x2F8D26b67d8be078A2BE40c1887379232746fD79
+            </div>
+
+            <button class="copy-btn" onclick="copyAddress()">
+                📋 نسخ عنوان المحفظة
+            </button>
+
+            <div class="warning">
+                ⚠️ <strong>تنبيه:</strong>
+                يرجى إرسال USDT أو BNB عبر شبكة
+                <strong>BEP20</strong> حصراً.
+                الحد الأدنى للإيداع هو <strong>1.00 USDT</strong>.
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="https://github.com/phoenixisgame/AntiBlockToolkit"
+           target="_blank" rel="noopener noreferrer">
+            ⭐ استكشف المشروع على GitHub
+        </a>
+
+        <p>
+            Anti-Block Toolkit · مشروع مفتوح المصدر
+        </p>
+    </footer>
+
+</div>
+
+<div class="toast" id="toast">
+    ✓ تم نسخ عنوان المحفظة بنجاح
+</div>
+
+<script>
+async function copyAddress() {
+    const address = document.getElementById("walletAddr").innerText.trim();
+
+    try {
+        await navigator.clipboard.writeText(address);
+    } catch (error) {
+        const input = document.createElement("textarea");
+        input.value = address;
+        input.style.position = "fixed";
+        input.style.opacity = "0";
+        document.body.appendChild(input);
+        input.select();
+
+        const copied = document.execCommand("copy");
+        input.remove();
+
+        if (!copied) {
+            prompt("انسخ عنوان المحفظة يدوياً:", address);
+            return;
         }
-    </script>
+    }
+
+    const toast = document.getElementById("toast");
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2500);
+}
+</script>
+
 </body>
 </html>
