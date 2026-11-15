@@ -1,0 +1,15 @@
+# Anti-Block Toolkit v1.0.0 (Official Windows Release)
+
+### 🚀 Highlights
+- **100% Local & Free:** No external VPS, no monthly fees, and no third-party TUN/TAP network drivers.
+- **Dual-Stack DoH Engine (127.0.0.1:53):** Bypasses ISP DNS hijacking and poisoning with multi-IP bootstrapping.
+- **TLS ClientHello Fragmentation (127.0.0.1:8881):** Bypasses Deep Packet Inspection (DPI) and SNI censorship on games and websites.
+- **Zero Ping Overhead for Gaming:** Native speed connection preserving your lowest in-game latency (0% packet loss).
+- **Tested & Verified:** Successfully unblocks **Street Fighter 6** (CFN error 50100-20011 resolved) and competitive gaming (Counter-Strike 2).
+
+### 📦 Files in this Release
+- AntiBlockToolkit.exe: Standalone portable executable. Right-click and choose **Run as administrator** -> Click **ENABLE SHIELD**.
+- emergency_restore.bat: Companion single-click emergency recovery script to revert all Windows network settings if needed.
+
+### ☕ Support the Developer
+Scan the QR code in the app settings or visit: https://github.com/phoenixisgame/AntiBlockToolkit
