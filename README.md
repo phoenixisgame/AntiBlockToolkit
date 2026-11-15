@@ -96,7 +96,7 @@ python build_exe.py
 If **Anti-Block Toolkit** helped you overcome ISP restrictions, game connection errors, or browsing blocks, consider supporting the development:
 
 <p align="center">
-  <img src="assets/qr_support.png" width="180" alt="Support QR Code" /><br/>
+  <img src="qr.png" width="180" alt="Support QR Code" /><br/>
   <b>Scan the QR code or star ⭐ this repository to show your support!</b>
 </p>
 
