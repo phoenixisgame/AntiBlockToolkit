@@ -1,168 +1,137 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعم مشروع Anti-Block Toolkit 🛡️</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; 
-            background-color: #0d1117; 
-            color: #c9d1d9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container { 
-            background-color: #161b22; 
-            padding: 35px 25px; 
-            border-radius: 16px; 
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5); 
-            max-width: 480px; 
-            width: 100%;
-            border: 1px solid #30363d;
-        }
-        h1 { color: #58a6ff; font-size: 24px; margin-bottom: 8px; }
-        .tagline { color: #3fb950; font-size: 13px; font-weight: bold; margin-bottom: 12px; }
-        p.subtitle { color: #8b949e; font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
-        .download-box {
-            margin-bottom: 20px;
-        }
-        .download-btn {
-            display: inline-block;
-            background-color: #238636;
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: 0.2s;
-            box-shadow: 0 4px 12px rgba(35, 134, 54, 0.4);
-        }
-        .download-btn:hover { background-color: #2ea043; transform: translateY(-1px); }
-        .qr-card {
-            background-color: #ffffff;
-            padding: 12px;
-            border-radius: 14px;
-            display: inline-block;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        .qr-card img {
-            max-width: 210px;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-        }
-        .badge-net {
-            background-color: rgba(88, 166, 255, 0.15);
-            color: #58a6ff;
-            border: 1px solid #58a6ff;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        .wallet-label {
-            font-size: 13px;
-            color: #8b949e;
-            margin-bottom: 6px;
-        }
-        .wallet-box { 
-            background-color: #0d1117; 
-            padding: 12px; 
-            border: 1px solid #30363d; 
-            border-radius: 8px; 
-            font-family: Consolas, monospace; 
-            font-size: 13px; 
-            margin-bottom: 15px; 
-            word-break: break-all; 
-            color: #58a6ff; 
-        }
-        .copy-btn {
-            background-color: #1f6feb;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.2s;
-            margin-bottom: 20px;
-        }
-        .copy-btn:hover { background-color: #388bfd; }
-        .warning-box { 
-            background-color: rgba(218, 54, 51, 0.1); 
-            color: #f85149; 
-            border: 1px solid rgba(218, 54, 51, 0.4); 
-            padding: 12px; 
-            border-radius: 8px; 
-            font-size: 12px; 
-            line-height: 1.5; 
-            margin-bottom: 15px;
-        }
-        .gh-link {
-            display: inline-block;
-            color: #8b949e;
-            text-decoration: none;
-            font-size: 13px;
-            margin-top: 5px;
-        }
-        .gh-link:hover { color: #58a6ff; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anti-Block Toolkit — Support & Download</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top, #141b2d 0%, #0b0f19 100%);
+      color: #e6edf3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 16px;
+      max-width: 540px;
+      width: 100%;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.8rem;
+      color: #f3ba2f;
+    }
+    p.subtitle {
+      color: #8b949e;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+    .btn-download {
+      display: inline-block;
+      background: #238636;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      transition: background 0.2s;
+    }
+    .btn-download:hover {
+      background: #2ea043;
+    }
+    .donate-box {
+      background: #0d1117;
+      border: 1px solid #f3ba2f55;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .donate-title {
+      color: #f3ba2f;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+    .wallet {
+      background: #161b22;
+      border: 1px dashed #30363d;
+      padding: 10px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      word-break: break-all;
+      color: #58a6ff;
+      margin: 12px 0;
+    }
+    .copy-btn {
+      background: #f3ba2f;
+      color: #0b0f19;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background: #ffd700;
+    }
+    .footer-links {
+      margin-top: 20px;
+      font-size: 0.85rem;
+    }
+    .footer-links a {
+      color: #8b949e;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .footer-links a:hover {
+      color: #e6edf3;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Anti-Block Toolkit 🛡️</h1>
-        <div class="tagline">أداة فك حجب الألعاب والمواقع محلياً للويندوز بدون لاغ أو VPN</div>
-        
-        <p class="subtitle">
-            مشروع مجاني ومحلي 100% يهدف لتجاوز حجب الشبكات والـ DPI بكامل سرعتك الأصلية وبدون زيادة في البينغ. يمكنك دعم استمرارية وتطوير الأداة عبر مسح الرمز أدناه أو التحويل إلى المحفظة:
-        </p>
+  <div class="card">
+    <h1>🛡️ Anti-Block Toolkit</h1>
+    <p class="subtitle">Fast, Local Windows DPI & DNS Bypass — Zero Ping Penalty</p>
 
-        <div class="download-box">
-            <a href="https://github.com/phoenixisgame/AntiBlockToolkit/releases/latest" class="download-btn">⬇️ تحميل أحدث نسخة للويندوز</a>
-        </div>
-        
-        <div class="qr-card">
-            <img src="qr.png" alt="Scan QR Code" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=0x2F8D26b67d8be078A2BE40c1887379232746fD79'">
-        </div>
-        
-        <div>
-            <span class="badge-net">الشبكة المطلوبة: BNB Smart Chain (BEP20)</span>
-        </div>
-        
-        <div class="wallet-label">عنوان المحفظة المعتمد (RedotPay / Crypto):</div>
-        <div class="wallet-box" id="walletAddr">0x2F8D26b67d8be078A2BE40c1887379232746fD79</div>
-        
-        <button class="copy-btn" onclick="copyAddress()">📋 نسخ العنوان</button>
-        
-        <div class="warning-box">
-            ⚠️ <strong>تنبيه هام:</strong> يرجى التأكد من إرسال (USDT أو BNB) عبر شبكة <strong>BEP20</strong> حصراً، والحد الأدنى للإيداع هو <strong>1.00 USDT</strong>.
-        </div>
+    <a class="btn-download" href="https://github.com/phoenixisgame/AntiBlockToolkit/releases">
+      ⬇️ Download Latest Release (Windows)
+    </a>
 
-        <div>
-            <a href="https://github.com/phoenixisgame/AntiBlockToolkit" class="gh-link">⭐ تابع المشروع على GitHub</a>
-        </div>
+    <div class="donate-box">
+      <div class="donate-title">💛 Support Project (BNB / USDT - BEP20)</div>
+      <div style="font-size: 0.85rem; color: #8b949e;">
+        RedotPay / BNB Smart Chain (BEP20) Wallet Address:
+      </div>
+      <div class="wallet" id="walletAddr">0x2F8D26b67d8be078A2BE40c1887379232746fD79</div>
+      <button class="copy-btn" onclick="copyWallet()">Copy Address</button>
+      <div id="statusMsg" style="color:#3fb950; font-size:0.85rem; margin-top:8px;"></div>
     </div>
 
-    <script>
-        function copyAddress() {
-            const addr = document.getElementById("walletAddr").innerText.trim();
-            navigator.clipboard.writeText(addr).then(() => {
-                alert("تم نسخ عنوان المحفظة بنجاح!");
-            }).catch(err => {
-                prompt("انسخ العنوان يدوياً:", addr);
-            });
-        }
-    </script>
+    <div class="footer-links">
+      <a href="https://github.com/phoenixisgame/AntiBlockToolkit">GitHub Repository</a> •
+      <a href="https://github.com/phoenixisgame/AntiBlockToolkit/issues">Report Issue</a>
+    </div>
+  </div>
+
+  <script>
+    function copyWallet() {
+      const addr = document.getElementById('walletAddr').innerText;
+      navigator.clipboard.writeText(addr).then(() => {
+        document.getElementById('statusMsg').innerText = '✅ Wallet address copied to clipboard!';
+      });
+    }
+  </script>
 </body>
 </html>
